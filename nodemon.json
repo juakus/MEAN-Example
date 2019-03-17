@@ -1,0 +1,7 @@
+{
+    "env": {
+        "MONGO_ATLAS_PW": "DP3.u8t9r-.M59e",
+        "MONGO_ATLAS_USER": "juakus",
+        "JWT_KEY": "secret_this_should_be_longer"
+    }
+}

@@ -1,0 +1,16 @@
+<mat-toolbar color="{{ color }}">
+    <mat-icon>{{ icon }}</mat-icon>
+    <span style="margin-right: 10px"></span>
+    <span>{{ title }}</span>
+</mat-toolbar>
+
+<mat-card>
+    <mat-card-content>
+        <p>{{ data.msg }}</p>
+    </mat-card-content>
+
+    <mat-dialog-actions align="center">
+        <button mat-raised-button mat-dialog-close>{{ dlgAction === 'w' ? 'Cancel' : 'Close'}}</button>
+        <button mat-raised-button color="{{ color }}" [mat-dialog-close]="true" *ngIf="dlgAction === 'w'">Confirm</button>
+    </mat-dialog-actions>
+</mat-card>
