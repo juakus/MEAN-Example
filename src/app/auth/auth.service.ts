@@ -8,7 +8,7 @@ import { environment } from './../../environments/environment';
 
 const USER_URL = environment.apiUrl + '/user';
 
-@Injectable({ providedIn: "root" })
+@Injectable({ providedIn: 'root' })
 export class AuthService {
     isAuthenticated = false;
     userId: string;

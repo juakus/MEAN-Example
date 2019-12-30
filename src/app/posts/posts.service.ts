@@ -8,7 +8,7 @@ import { environment } from './../../environments/environment';
 
 const POSTS_URL = environment.apiUrl + '/posts/';
 
-@Injectable({ providedIn: "root" })
+@Injectable({ providedIn: 'root' })
 export class PostsService {
     private posts: Post[] = [];
     private postsUpdated = new Subject<{ posts: Post[], postsCount: number }>();
@@ -32,7 +32,7 @@ export class PostsService {
                             };
                         }),
                         maxPosts: postData.maxPosts
-                    }
+                    };
                 })
             )
             .subscribe(fixedPostsData => {
@@ -54,9 +54,9 @@ export class PostsService {
 
     addPost(title: string, content: string, image: File) {
         const postData = new FormData();
-        postData.append("title", title);
-        postData.append("content", content);
-        postData.append("image", image, title);
+        postData.append('title', title);
+        postData.append('content', content);
+        postData.append('image', image, title);
 
         this.http.post<{ message: string, post: Post }>(POSTS_URL, postData)
             .subscribe(responseData => {
@@ -69,10 +69,10 @@ export class PostsService {
 
         if (typeof (image) === 'object') {
             postData = new FormData();
-            postData.append("id", id);
-            postData.append("title", title);
-            postData.append("content", content);
-            postData.append("image", image, title);
+            postData.append('id', id);
+            postData.append('title', title);
+            postData.append('content', content);
+            postData.append('image', image, title);
         } else {
             postData = {
                 id: id,

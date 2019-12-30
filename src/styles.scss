@@ -10,7 +10,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 $custom-app-primary: mat-palette($mat-blue-grey, 800);
 $custom-app-accent:  mat-palette($mat-orange, 900);
 $custom-app-warn:  mat-palette($mat-red, 800);
-$custom-app-theme:   mat-light-theme($custom-app-primary, $custom-app-accent, $custom-app-warn);
+$custom-app-theme:   mat-dark-theme($custom-app-primary, $custom-app-accent, $custom-app-warn);
 
 @include angular-material-theme($custom-app-theme);
 
